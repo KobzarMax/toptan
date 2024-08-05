@@ -5,9 +5,6 @@
   font-family: "Be Vietnam Pro", sans-serif;
 }
 
-.header {
-  border-bottom: 1px solid #00000014;
-}
 .header-inner {
   display: flex;
   align-items: center;
