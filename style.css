@@ -56,6 +56,9 @@
   line-height: 24px;
   font-weight: 700;
 }
+.footer-list-item:last-child {
+  display: none;
+}
 .main-inner {
   display: flex;
   justify-content: space-between;
@@ -95,7 +98,7 @@
 .main-content-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 24px;
   position: relative;
   width: 100%;
   max-width: 400px;
@@ -110,7 +113,7 @@
 .main-content-form input {
   background-color: #121212;
   border-radius: 60px;
-  padding: 16px;
+  padding: 12px;
   color: #ffffff;
   font-size: 18px;
   line-height: 28px;
@@ -127,7 +130,7 @@
   bottom: 4px;
   right: 4px;
   border-radius: 60px;
-  padding: 12px 24px;
+  padding: 8px 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,6 +187,9 @@
   .main-image-wrapper {
     max-width: 380px;
     width: 100%;
+  }
+  .footer-list-item:last-child {
+    display: block;
   }
   .main-content-subtitle {
     max-width: 100%;
