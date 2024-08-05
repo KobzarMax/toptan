@@ -59,6 +59,11 @@
 .footer-list-item:last-child {
   display: none;
 }
+.success-text {
+  display: none;
+  font-weight: 500;
+  color: #00c400;
+}
 .main-inner {
   display: flex;
   justify-content: space-between;

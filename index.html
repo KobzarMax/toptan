@@ -26,7 +26,7 @@
             <p class="main-content-subtitle">
               Your Premier European B2B marketplace bridging the gap between offline suppliers from Turkey and beyond.
             </p>
-            <form action="" class="main-content-form">
+            <form id="notifyForm" action="" class="main-content-form">
               <label for="email">
                 Get notified when we launch
               </label>
@@ -35,6 +35,23 @@
                 Notify Me
               </button>
             </form>
+            <p class="success-text">
+              Your request was successfully sent!
+            </p>
+            <script>
+              document.getElementById('notifyForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const email = document.getElementById('email').value;
+                const success = document.querySelector('.success-text');
+
+                if (email) {
+                  success.style.display = 'block';
+                  document.getElementById('notifyForm').reset();
+                } else {
+                  success.style.display = 'none';
+                }
+              });
+            </script>
           </div>
           <ul class="footer-list">
             <li class="footer-list-item">
@@ -44,13 +61,13 @@
               <img src="./assets/check-circle.svg" alt="checkmark"> Trade Insurance
             </li>
             <li class="footer-list-item">
+              <img src="./assets/check-circle.svg" alt="checkmark"> Dropship From Turkish Suppliers
+            </li>
+            <li class="footer-list-item">
               <img src="./assets/check-circle.svg" alt="checkmark"> Buy Now Pay Later
             </li>
             <li class="footer-list-item">
               <img src="./assets/check-circle.svg" alt="checkmark"> No Minimum Order
-            </li>
-            <li class="footer-list-item">
-              <img src="./assets/check-circle.svg" alt="checkmark"> Dropship From Turkish Suppliers
             </li>
             <li class="footer-list-item">
               <img src="./assets/check-circle.svg" alt="checkmark"> Secure Payment Gateways
