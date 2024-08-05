@@ -44,6 +44,7 @@
   flex-wrap: wrap;
   gap: 20px;
   list-style: none;
+  padding: 24px 0 0 0;
 }
 .footer-list-item {
   display: flex;
@@ -73,7 +74,7 @@
   max-width: 730px;
 }
 .main-image-wrapper {
-  max-width: 360px;
+  max-width: 400px;
   width: 100%;
 }
 .main-image-wrapper img {
@@ -150,6 +151,7 @@
 }
 .footer {
   padding-bottom: 20px;
+  margin-top: 32px;
 }
 
 @media (max-width: 1200px) {
