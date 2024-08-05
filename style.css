@@ -151,12 +151,21 @@
   margin-top: 32px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1360px) {
   .container {
     padding: 0 24px;
   }
   .header-inner {
     padding: 16px;
+  }
+  .main-image-wrapper {
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 24px;
   }
   .main-content-title {
     font-size: 50px;
