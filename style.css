@@ -44,7 +44,7 @@
   flex-wrap: wrap;
   gap: 20px;
   list-style: none;
-  padding: 40px 0 0 0;
+  padding: 24px 0 0 0;
 }
 .footer-list-item {
   display: flex;
