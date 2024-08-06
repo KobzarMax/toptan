@@ -168,8 +168,21 @@
     padding: 0 24px;
   }
   .main-content-title {
-    font-size: 50px;
-    line-height: 60px;
+    font-size: 40px;
+    line-height: 52px;
+  }
+  .main-image-wrapper {
+    max-width: 320px;
+  }
+  .footer-list-item img {
+    width: 16px;
+    height: 16px;
+  }
+  .footer-list-item {
+    font-size: 14px;
+  }
+  .main-inner {
+    gap: 0;
   }
 }
 
