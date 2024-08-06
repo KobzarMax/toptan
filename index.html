@@ -26,27 +26,45 @@
             <p class="main-content-subtitle">
               Your Premier European B2B marketplace bridging the gap between offline suppliers from Turkey and beyond.
             </p>
-            <form id="notifyForm" action="" class="main-content-form">
-              <label for="email">
+            <div id="notifyForm" class="main-content-form">
+              <p>
                 Get notified when we launch
-              </label>
-              <input id="email" name="email" type="email" required placeholder="Enter your email">
-              <button type="submit" class="main-form-button">
-                Notify Me
-              </button>
-            </form>
+              </p>
+<!--              <input id="email" name="email" type="email" required placeholder="Enter your email">-->
+<!--              <button type="submit" class="main-form-button">-->
+<!--                Notify Me-->
+<!--              </button>-->
+            </div>
+            <div class="klaviyo-form-RAfhPv"></div>
             <p class="success-text">
               Your request was successfully sent!
             </p>
             <script>
-              document.getElementById('notifyForm').addEventListener('submit', function(event) {
+              document.getElementById('notifyForm').addEventListener('submit', async function(event) {
                 event.preventDefault();
                 const email = document.getElementById('email').value;
                 const success = document.querySelector('.success-text');
 
                 if (email) {
-                  success.style.display = 'block';
-                  document.getElementById('notifyForm').reset();
+                  try {
+                    const response = await fetch('https://a.klaviyo.com/api/v2/list/Wg4Y4N/subscribe', {
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify({
+                        api_key: 'pk_ed2cc4dd476943d68da835b95e3f13376c',
+                        profiles: [{ email: email }]
+                      })
+                    });
+
+                    if (response.ok) {
+                      success.style.display = 'block';
+                      document.getElementById('notifyForm').reset();
+                    }
+                  } catch (error) {
+                    throw error;
+                  }
                 } else {
                   success.style.display = 'none';
                 }
@@ -80,6 +98,7 @@
         </div>
       </div>
     </main>
+    <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=QQSPqP"></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
