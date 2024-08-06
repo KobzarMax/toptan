@@ -5,6 +5,20 @@
   font-family: "Be Vietnam Pro", sans-serif;
 }
 
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .header-inner {
   display: flex;
   align-items: center;
@@ -35,20 +49,19 @@
 }
 
 .footer-list {
-  display: grid;
+  display: flex;
   align-items: center;
-  grid-template-columns: repeat(4, 1fr);
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 20px;
   list-style: none;
-  padding: 24px 100px;
+  padding: 24px 0 0 0;
 }
 .footer-list-item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 8px;
-  white-space: nowrap;
   color: #000000DE;
   font-size: 18px;
   line-height: 24px;
@@ -65,7 +78,7 @@
   align-items: center;
   gap: 20px;
 }
-.main-content {
+.main-content-inner {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -73,10 +86,8 @@
   margin-top: -10px;
 }
 .main-image-wrapper {
-  max-width: 340px;
+  max-width: 400px;
   width: 100%;
-  margin-top: -30px;
-  margin-right: 100px;
 }
 .main-image-wrapper img {
   width: 100%;
@@ -161,6 +172,10 @@
   .main-image-wrapper {
     max-width: 360px;
   }
+  .footer-list-item img {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -173,7 +188,6 @@
   }
   .main-image-wrapper {
     max-width: 320px;
-    margin-right: 0;
   }
   .footer-list-item {
     font-size: 14px;
@@ -181,16 +195,29 @@
   .main-inner {
     gap: 0;
   }
+  body {
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 }
 
 @media (max-width: 992px) {
   .container {
     padding: 0 12px;
   }
+  body {
+    height: auto;
+  }
   .main-image-wrapper img {
     width: 100%;
-    margin-right: 0;
-
   }
   .footer-list {
     display: grid;
@@ -213,7 +240,6 @@
   .main-image-wrapper {
     max-width: 380px;
     width: 100%;
-    margin-top: 0;
   }
   .main-content-subtitle {
     max-width: 100%;
