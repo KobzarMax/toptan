@@ -35,19 +35,20 @@
 }
 
 .footer-list {
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: flex-start;
+  grid-template-columns: repeat(4, 1fr);
   flex-wrap: wrap;
   gap: 20px;
   list-style: none;
-  padding: 24px 0 0 0;
+  padding: 24px 100px;
 }
 .footer-list-item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 8px;
+  white-space: nowrap;
   color: #000000DE;
   font-size: 18px;
   line-height: 24px;
@@ -64,15 +65,18 @@
   align-items: center;
   gap: 20px;
 }
-.main-content-inner {
+.main-content {
   display: flex;
   flex-direction: column;
   gap: 24px;
   max-width: 730px;
+  margin-top: -10px;
 }
 .main-image-wrapper {
-  max-width: 400px;
+  max-width: 340px;
   width: 100%;
+  margin-top: -30px;
+  margin-right: 100px;
 }
 .main-image-wrapper img {
   width: 100%;
@@ -146,10 +150,6 @@
 .main-form-button:hover {
   opacity: 0.8;
 }
-.footer {
-  padding-bottom: 20px;
-  margin-top: 32px;
-}
 
 @media (max-width: 1360px) {
   .container {
@@ -173,10 +173,7 @@
   }
   .main-image-wrapper {
     max-width: 320px;
-  }
-  .footer-list-item img {
-    width: 16px;
-    height: 16px;
+    margin-right: 0;
   }
   .footer-list-item {
     font-size: 14px;
@@ -190,12 +187,19 @@
   .container {
     padding: 0 12px;
   }
-  .main-inner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
   .main-image-wrapper img {
     width: 100%;
+    margin-right: 0;
+
+  }
+  .footer-list {
+    display: grid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-list-item {
+    white-space: normal;
   }
 }
 
@@ -209,6 +213,7 @@
   .main-image-wrapper {
     max-width: 380px;
     width: 100%;
+    margin-top: 0;
   }
   .main-content-subtitle {
     max-width: 100%;
@@ -216,12 +221,9 @@
     font-size: 16px;
     line-height: 20px;
   }
-  .main-content-inner {
+  .main-content {
     align-items: center;
     gap: 12px;
-  }
-  .footer {
-    padding-bottom: 32px;
   }
   .main-content-title {
     text-align: center;
@@ -251,12 +253,6 @@
   .footer-list-item {
     font-size: 16px;
     line-height: 20px;
-  }
-  .footer-list {
-    display: grid;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    grid-template-columns: repeat(2, 1fr);
   }
   .main-content-form {
     align-items: center;
