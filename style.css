@@ -116,26 +116,6 @@ main {
   font-size: 20px;
   line-height: 28px;
 }
-.main-content-form input {
-  background-color: #121212;
-  border-radius: 60px;
-  padding: 12px;
-  padding-right: 150px;
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 28px;
-  outline: none;
-  transition: 0.3s all ease-in-out;
-  border: none;
-}
-.main-content-form input::placeholder {
-  color: #FFFFFFA3;
-  font-size: 16px;
-}
-
-.main-form-button:hover {
-  opacity: 0.8;
-}
 
 .klaviyo-form form {
   padding: 0 !important;
@@ -146,9 +126,28 @@ main {
   width: 100%;
   max-width: 400px;
 }
-.klaviyo-form .kl-private-reset-css-Xuajs1 {
-  min-height: fit-content !important;
-    padding: 0 !important;
+div[data-testid="form-component"] {
+  padding: 0 !important;
+}
+.klaviyo-form input {
+  background-color: #121212 !important;
+  border-radius: 60px !important;
+  padding: 12px !important;
+  padding-right: 150px !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  line-height: 28px !important;
+  outline: none !important;
+  transition: 0.3s all ease-in-out !important;
+  border: none !important;
+  height: auto !important;
+  font-family: "Be Vietnam Pro", sans-serif !important;
+  letter-spacing: 0 !important;
+}
+.klaviyo-form input::placeholder {
+  color: #FFFFFFA3 !important;
+  font-size: 16px !important;
+  font-family: "Be Vietnam Pro", sans-serif !important;
 }
 .klaviyo-form button {
   position: absolute !important;
@@ -166,8 +165,15 @@ main {
   font-size: 18px !important;
   line-height: 28px !important;
   width: fit-content !important;
+  height: fit-content !important;
   font-weight: 700 !important;
   cursor: pointer !important;
+  white-space: nowrap !important;
+  font-family: "Be Vietnam Pro", sans-serif !important;
+}
+
+.klaviyo-form button:hover {
+  opacity: 0.8 !important;
 }
 
 @media (max-width: 1360px) {
@@ -273,13 +279,13 @@ main {
     font-size: 18px;
     line-height: 24px;
   }
-  .main-content-form input {
-    font-size: 14px;
-    line-height: 16px;
+  .klaviyo-form input {
+    font-size: 14px !important;
+    line-height: 16px !important;
   }
-  .main-form-button {
-    font-size: 14px;
-    line-height: 16px;
+  .klaviyo-form button {
+    font-size: 14px !important;
+    line-height: 16px !important;
   }
 }
 
@@ -291,8 +297,8 @@ main {
   .main-content-form {
     align-items: center;
   }
-  .main-content-form input {
-    width: 100%;
+  .klaviyo-form input {
+    width: 100% !important;
   }
   .main-content-title {
     align-items: center;
